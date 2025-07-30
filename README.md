@@ -15,10 +15,10 @@ Predict district-level crop yields in Pakistan using:
 
 | **Source** | **Data Type** | **Access Method** |
 |------------|---------------|-------------------|
-| [Punjab Soil Health Portal](http://soilhealth.punjab.gov.pk) | pH, N-P-K levels | Web scraping/PDF parsing |
-| [PMD Climate Portal](https://www.pmd.gov.pk/climate) | Rainfall/Temperature | CSV download |
+| [Punjab Soil Health Portal](https://soil.punjab.gov.pk/) | pH, N-P-K levels | Web scraping/PDF parsing |
+| [PMD Climate Portal](https://cdpc.pmd.gov.pk/) | Rainfall/Temperature | CSV download |
 | SUPARCO | 10m resolution NDVI | Google Earth Engine |
-| [Pakistan Bureau of Statistics](http://www.pbs.gov.pk/agri-statistics) | Historical yields | PDF reports |
+| [Pakistan Bureau of Statistics](https://www.pbs.gov.pk/agriculture-statistics-tables) | Historical yields | PDF reports |
 
 **Sample Data Format:**
 ```csv
