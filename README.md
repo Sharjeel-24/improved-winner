@@ -1,65 +1,27 @@
-# 🌱 Project Title: Crop Yield Prediction Using Soil & Weather Data
+# 🇵🇰 Pakistan Crop Yield Prediction Project
 
 ## 🎯 Objective  
-Predict crop yields using soil health indicators and weather patterns to optimize farming inputs.
+Predict district-level crop yields in Pakistan using:
+- Soil health data from **Punjab Soil Fertility Labs**
+- Weather patterns from **PMD (Pakistan Meteorological Department)**
+- Satellite NDVI from **SUPARCO**
 
-**Example:**  
-Develop ML models to forecast maize yields based on soil nutrients and weather data.
-
----
-
-## 🌾 Dataset  
-- **Source:** FAO/NASA/Government Agri-Portal  
-- **Size:** 5,000 soil samples + 3yr weather data  
-- **Key Features:**  
-  - Soil pH, N-P-K levels  
-  - Rainfall, temperature, humidity  
-  - Satellite NDVI indices  
-- **Format:** CSV/GeoJSON  
-- **Public Link:** [example.com/dataset]  
+**Example Output:**  
+*"Wheat yield prediction for Punjab (2023-24) with fertilizer recommendations"*
 
 ---
 
-## 🛠️ Tools & Technologies  
-- **Python:** Pandas, Scikit-learn, GeoPandas  
-- **Visualization:** Matplotlib, Plotly  
-- **GIS:** QGIS, Google Earth Engine  
-- **ML:** XGBoost, Random Forest  
+## 🌾 Dataset Sources (Pakistan-Specific)
 
----
+| **Source** | **Data Type** | **Access Method** |
+|------------|---------------|-------------------|
+| [Punjab Soil Health Portal](http://soilhealth.punjab.gov.pk) | pH, N-P-K levels | Web scraping/PDF parsing |
+| [PMD Climate Portal](https://www.pmd.gov.pk/climate) | Rainfall/Temperature | CSV download |
+| SUPARCO | 10m resolution NDVI | Google Earth Engine |
+| [Pakistan Bureau of Statistics](http://www.pbs.gov.pk/agri-statistics) | Historical yields | PDF reports |
 
-## 🌱 Key Steps  
-
-### 1. **Data Cleaning**  
-- Fixed soil test measurement inconsistencies  
-- Imputed missing weather data  
-
-### 2. **EDA**  
-- Found 30% yield boost in loamy soils  
-- Identified optimal temperature ranges  
-
-### 3. **Modeling**  
-- Achieved 89% accuracy with XGBoost  
-- Deployed as farmer-facing web app  
-
----
-
-## 📌 Impact  
-- **22%** water savings via irrigation alerts  
-- **15%** reduced fertilizer costs  
-- **40%** higher farmer adoption rate  
-
----
-
-## 📂 Files  
-| **File**               | **Description**               |  
-|------------------------|-------------------------------|  
-| `soil_analysis.ipynb`  | Data cleaning & EDA           |  
-| `model_training.py`    | ML pipeline                   |  
-
----
-
-## 🤝 Contact  
-**Your Name**  
-📧 email@example.com  
-🔗 linkedin.com/in/yourprofile  
+**Sample Data Format:**
+```csv
+district,soil_ph,n_level,p_level,k_level,rainfall(mm),yield(kg/acre)
+"Faisalabad",7.2,45,12,180,350,3200
+"Multan",8.1,32,8,210,290,1700
